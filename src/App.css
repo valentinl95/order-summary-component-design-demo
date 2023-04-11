@@ -12,13 +12,13 @@ html, body, #root {
 
 body {
   background: url(/public/pattern-background-desktop.svg), #e0e8ff;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 
 @media only screen and (max-width: 375px) {
   body {
     background: url(/public/pattern-background-mobile.svg), #e0e8ff;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
   }
 }
 
