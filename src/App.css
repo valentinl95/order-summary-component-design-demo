@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background: url(/public/pattern-background-desktop.svg), #e0e8ff;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background: url(/public/pattern-background-mobile.svg), #e0e8ff;
+    background-repeat: no-repeat;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 350px;
+  background-color: white;
   display: flex;
   flex-direction: column;
+  font-family: 'Red Hat Display', sans-serif;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 15px 15px 0px #8888ff20;
+}
+
+.container .illustration {
+  width: 100%;
+}
+
+.container .content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container .header {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.container .description {
+  font-weight: 400;
+  font-size: 16px;
+  color: hsl(224, 23%, 55%)
+}
+
+.container .order_content {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  background-color: #f8f9fe;
+  padding: 16px;
+}
+
+.container .order_content .plan_and_icon {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 16px;
+}
+
+.container .order_content .music_icon {
+  height: 40px;
+}
+
+.container .order_content .info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.container .order_content .annual_plan_text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container .order_content .price_text {
+  font-size: 15px;
+  color: hsl(224, 23%, 55%);
+}
+
+.container .order_content .change_text {
+  text-decoration: underline;
+  color: #382ae1;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.container .order_content .change_text:hover {
+  text-decoration: none;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.container .proceed_to_payment {
+  border-radius: 10px;
+  height: 40px;
+  background-color: #382ae1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
   color: white;
+  box-shadow: 1px 15px 10px 0px #382ae120;
 }
 
-.App-link {
-  color: #61dafb;
+.container .proceed_to_payment:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .cancel_order .cancel_order_text {
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.4;
+}
+
+.container .cancel_order .cancel_order_text:hover {
+  opacity: 1;
+  cursor: pointer;
 }
